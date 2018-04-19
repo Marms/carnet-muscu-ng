@@ -9,7 +9,9 @@ export class ExoTemplateService {
   getExoTemplatesList() {
     return this.exoTemplates;
   }
-
+  addExoTemplate(exoT : ExoTemplate) {
+    this.exoTemplates.push(exoT);
+  }
   getExoTemplate(id: string) {
     const exoTemplate: ExoTemplate =
       this.exoTemplates.find(

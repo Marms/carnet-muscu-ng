@@ -1,11 +1,25 @@
 <div class="row">
+  <h2>Seance Template List</h2>
+</div>
+<div class="row">
+    <button class="btn btn-primary">Nouveau Template</button>
+    
+  <div class="table-responsive">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let seanceT of scTemplates">
+          <td>{{seanceT.id}}</td>
+          <td>{{seanceT.name}}</td>
+        </tr>
+      </tbody>
+    </table>
 
-  <div class="list-group">
-    <a href="#" class="list-group-item"
-      *ngFor="let seanceT of scTemplates"
-    >
-    {{seanceT.id}} {{seanceT.name}}
-  </a>
 
   </div>
 </div>

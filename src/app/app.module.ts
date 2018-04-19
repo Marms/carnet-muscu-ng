@@ -10,6 +10,7 @@ import { ExoTemplateComponent } from './exo-template/exo-template.component';
 import { ExoTemplateService } from './exo-template.service';
 import { SeanceTemplateComponent } from './seance-template/seance-template.component';
 import { SeanceTemplateService } from './seance-template.service';
+import { AppRoutingModule } from './app-routing.modules.service';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { SeanceTemplateService } from './seance-template.service';
     SeanceTemplateComponent
     ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [SeanceService, ExoTemplateService, SeanceTemplateService],
   bootstrap: [AppComponent]

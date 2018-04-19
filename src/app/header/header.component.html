@@ -1,20 +1,4 @@
-<div class="container">
-  
-    <div class="row">
-        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-          <ul class="nav nav-tabs">
-            <li role="presentation"
-            
-            ><a href="#/">Home</a></li>
-            
-            <li role="presentation" ><a href="#">Seance</a></li>
-            <li role="presentation" ><a href="#">Seance Template</a></li>
-            <li role="presentation" ><a href="#">Exercice Template</a></li>
-          </ul>
-        </div>
-      </div>
-    
-</div>
+
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <a class="navbar-brand" href="#">Navbar</a>
     <button class="navbar-toggler" type="button"
@@ -26,17 +10,17 @@
   
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mr-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+          <li routerLinkActive="active" class="nav-item">
+            <a class="nav-link" [routerLink]="['/']">Home<span class="sr-only">(current)</span></a>
           </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Seance<span class="sr-only">(current)</span></a>
+        <li class="nav-item"  routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/seances']">Seances<span class="sr-only">(current)</span></a>
           </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Seance Template</a>
+        <li class="nav-item"  routerLinkActive="active">
+          <a class="nav-link" [routerLink]="['/exo-templates']">Exo  Template</a>
         </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Seance Template</a>
+        <li class="nav-item"  routerLinkActive="active">
+            <a class="nav-link" [routerLink]="['/sc-templates']">Seance Template</a>
           </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">

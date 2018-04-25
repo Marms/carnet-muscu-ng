@@ -1,0 +1,29 @@
+<h1>Seance {{seance.id}} Detail</h1>
+<div class="row">
+  <label for="name">Name: </label>
+  <p id="name">{{seance.name}}</p>
+</div>
+
+<a [routerLink]="['/seances', 'list']" class="btn btn-warning">Close</a>
+<div class="row">
+    <div class="table-responsive max-heigth">
+        <table class="table table-bordered table-hover">
+          <thead><tr>
+            <th>id</th>
+            <th>name</th>
+            <th>type</th>  
+            <th>result</th>
+          </tr></thead>
+          <tbody class="max-heigth">
+            
+              <tr *ngFor="let exo of seance.exercices" >
+                <td>{{exo.id}}</td>
+                <td> {{exo.exoPredef.name}}</td>
+                <td>{{exo.exoPredef.type}}</td>
+                <td><p *ngFor="let serie of exo.series">{{serie.nbRepeat}}*{{serie.poids}}</p></td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+
+</div>

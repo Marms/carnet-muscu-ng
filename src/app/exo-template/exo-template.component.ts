@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ExoTemplateService } from '../exo-template.service';
 import { ExoTemplate } from '../shared/exoTemplate';
+import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-exo-template',
@@ -9,11 +11,14 @@ import { ExoTemplate } from '../shared/exoTemplate';
 })
 export class ExoTemplateComponent implements OnInit {
 
-  exoTemplates: ExoTemplate[];
-  constructor(private exoTempSvc: ExoTemplateService) { }
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
-    this.exoTemplates = this.exoTempSvc.getExoTemplatesList();
-  }
+    this.navigate();
+    }
 
-}
+    navigate(){
+     this.router.navigate(['list'], {relativeTo: this.activatedRoute}); 
+    }
+
+  }

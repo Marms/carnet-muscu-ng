@@ -1,0 +1,27 @@
+<h1>Seance Template {{seanceT.id}} Detail</h1>
+<div class="row">
+  <label for="name">Name: </label>
+  <p id="name">{{seanceT.name}}</p>
+</div>
+
+<a [routerLink]="['/sc-templates', 'list']" class="btn btn-warning">Close</a>
+<div class="row">
+    <div class="table-responsive max-heigth">
+        <table class="table table-bordered table-hover">
+          <thead><tr>
+            <th>id</th>
+            <th>name</th>
+            <th>type</th>  
+          </tr></thead>
+          <tbody class="max-heigth">
+            
+              <tr *ngFor="let exoT of seanceT.list" >
+                <td>{{exoT.id}}</td>
+                <td> {{exoT.name}}</td>
+                <td>{{exoT.type}}</td>
+              </tr>
+          </tbody>
+        </table>
+    </div>
+
+</div>

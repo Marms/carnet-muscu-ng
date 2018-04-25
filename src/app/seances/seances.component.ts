@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { SeanceService } from '../seance.service';
 import { Seance } from '../shared/seance';
+import { ActivatedRoute } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-seances',
@@ -9,13 +11,10 @@ import { Seance } from '../shared/seance';
 })
 export class SeancesComponent implements OnInit {
 
-  seances: Seance[];
-
-  constructor(private seanceSvc: SeanceService) { }
+  constructor(private activatedRoute : ActivatedRoute, private route: Router) { }
 
   ngOnInit() {
-    this.seances = this.seanceSvc.getSeances();
-    console.log(this.seances.length +" taille seance");
+    this.route.navigate(['list'], {relativeTo: this.activatedRoute});
   }
 
 }

@@ -1,0 +1,35 @@
+<div class="row">
+  <div class="col-xs-12">
+    <h1>{{exoTemplate.name}}</h1>
+  </div>
+</div>
+<div class="row">
+    <label for="id">ID: </label>
+    <div id="id" class="col-xs-12">{{exoTemplate.id}}</div>
+  </div>
+  <div class="row">
+      <label for="image">IMAGE: </label>
+      <div id="image" class="col-xs-12"><img src="{{exoTemplate.image}}" alt="" class="img-responsive"></div>
+  </div>
+  <div class="row">
+    <label for="type">TYPE: </label>
+    <div class="col-xs-12">{{exoTemplate.type}}</div>
+</div>
+
+<div class="row">
+    <div class="col-xs-12">
+      <div appDropdown class="btn-group">
+        <button type="button"  
+        class="btn btn-primary dropdown-toggle">Manage Exo Template<span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <!-- TODO en fonction d'un parametre afficher ce code la selection permettra de l'ajoute a une seance template <li><a style="cursor: pointer" (click)="onAddToShoppingList()">Add Ingredients to shopping List</a></li> -->
+          <li><a style="cursor: pointer" >Edit Exo Template</a></li>
+          <li><a style="cursor: pointer" >Delete Exo Template</a></li>
+        </ul>
+  
+      </div>
+    </div>
+    <div class="col-xs-12">
+      <a class="btn btn-primary" [routerLink]="['/exo-templates', 'list']">CLOSE</a>
+    </div>
+</div>

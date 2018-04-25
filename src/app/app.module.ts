@@ -11,6 +11,12 @@ import { ExoTemplateService } from './exo-template.service';
 import { SeanceTemplateComponent } from './seance-template/seance-template.component';
 import { SeanceTemplateService } from './seance-template.service';
 import { AppRoutingModule } from './app-routing.modules.service';
+import { ExoTemplateDetailComponent } from './exo-template/exo-template-detail/exo-template-detail.component';
+import { ExoTemplateListComponent } from './exo-template/exo-template-list/exo-template-list.component';
+import { SeanceTemplateDetailComponent } from './seance-template/seance-template-detail/seance-template-detail.component';
+import { SeanceTemplateListComponent } from './seance-template/seance-template-list/seance-template-list.component';
+import { SeanceListComponent } from './seances/seance-list/seance-list.component';
+import { SeanceDetailComponent } from './seances/seance-detail/seance-detail.component';
 
 
 @NgModule({
@@ -19,7 +25,13 @@ import { AppRoutingModule } from './app-routing.modules.service';
     SeancesComponent,
     HeaderComponent,
     ExoTemplateComponent,
-    SeanceTemplateComponent
+    SeanceTemplateComponent,
+    ExoTemplateDetailComponent,
+    ExoTemplateListComponent,
+    SeanceTemplateDetailComponent,
+    SeanceTemplateListComponent,
+    SeanceListComponent,
+    SeanceDetailComponent
     ],
   imports: [
     BrowserModule,

@@ -1,18 +1,18 @@
 <div class="row"><h2>
     Exo Template List
   </h2>
-  </div> 
+  </div>
   <div class="row">
-      <button class="btn btn-primary">Nouveau Template</button>
+      <a class="btn btn-primary" [routerLink]="['/exo-templates', 'new']">Nouveau Template</a>
       <div class="table-responsive max-heigth">
           <table class="table table-bordered table-hover">
             <thead><tr>
               <th>id</th>
               <th>name</th>
-              <th>type</th>  
+              <th>type</th>
             </tr></thead>
             <tbody class="max-heigth">
-              
+
                 <tr *ngFor="let exoT of exoTemplates" >
                   <td><a  [routerLink]="['/exo-templates', exoT.id]"> {{exoT.id}}</a></td>
                   <td> {{exoT.name}}</td>
@@ -21,5 +21,5 @@
             </tbody>
           </table>
       </div>
-  
+
   </div>

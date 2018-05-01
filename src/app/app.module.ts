@@ -17,6 +17,8 @@ import { SeanceTemplateDetailComponent } from './seance-template/seance-template
 import { SeanceTemplateListComponent } from './seance-template/seance-template-list/seance-template-list.component';
 import { SeanceListComponent } from './seances/seance-list/seance-list.component';
 import { SeanceDetailComponent } from './seances/seance-detail/seance-detail.component';
+import { ExoTemplateEditComponent } from './exo-template/exo-template-edit/exo-template-edit.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -31,11 +33,13 @@ import { SeanceDetailComponent } from './seances/seance-detail/seance-detail.com
     SeanceTemplateDetailComponent,
     SeanceTemplateListComponent,
     SeanceListComponent,
-    SeanceDetailComponent
+    SeanceDetailComponent,
+    ExoTemplateEditComponent
     ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [SeanceService, ExoTemplateService, SeanceTemplateService],
   bootstrap: [AppComponent]

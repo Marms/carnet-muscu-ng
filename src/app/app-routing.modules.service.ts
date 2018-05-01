@@ -9,7 +9,7 @@ import { SeanceTemplateDetailComponent } from './seance-template/seance-template
 import { SeanceTemplateListComponent } from './seance-template/seance-template-list/seance-template-list.component';
 import { SeanceListComponent } from './seances/seance-list/seance-list.component';
 import { SeanceDetailComponent } from './seances/seance-detail/seance-detail.component';
-
+import { ExoTemplateEditComponent } from './exo-template/exo-template-edit/exo-template-edit.component';
 
 const routes : Routes = [
   {path: "seances", component: SeancesComponent, children: [
@@ -18,21 +18,21 @@ const routes : Routes = [
   ]}
   ,{path: "exo-templates", component: ExoTemplateComponent, children: [
     {path: "list", component: ExoTemplateListComponent} ,
+    {path: ":exoId/edit", component: ExoTemplateEditComponent},
+    {path: "new", component: ExoTemplateEditComponent},
     {path: ":exoId", component: ExoTemplateDetailComponent}
-    
-    
   ]}
   ,{path: "sc-templates", component: SeanceTemplateComponent, children: [
-    {path: "list", component: SeanceTemplateListComponent}, // etrangement obligation de mettre le path list avant sinon erreur
+      {path: "list", component: SeanceTemplateListComponent}, // etrangement obligation de mettre le path list avant sinon erreur
     {path: ":id", component: SeanceTemplateDetailComponent}
-    
+
   ]}
   ,{path: "**", redirectTo: "/"}
 ];
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes, {useHash: true})
   ],
   exports: [RouterModule]
 })

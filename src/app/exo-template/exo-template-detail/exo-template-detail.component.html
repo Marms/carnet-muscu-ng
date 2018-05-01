@@ -19,17 +19,20 @@
 <div class="row">
     <div class="col-xs-12">
       <div appDropdown class="btn-group">
-        <button type="button"  
+        <button type="button"
         class="btn btn-primary dropdown-toggle">Manage Exo Template<span class="caret"></span></button>
         <ul class="dropdown-menu">
           <!-- TODO en fonction d'un parametre afficher ce code la selection permettra de l'ajoute a une seance template <li><a style="cursor: pointer" (click)="onAddToShoppingList()">Add Ingredients to shopping List</a></li> -->
           <li><a style="cursor: pointer" >Edit Exo Template</a></li>
           <li><a style="cursor: pointer" >Delete Exo Template</a></li>
         </ul>
-  
+
       </div>
     </div>
     <div class="col-xs-12">
-      <a class="btn btn-primary" [routerLink]="['/exo-templates', 'list']">CLOSE</a>
+      <a class="btn btn-warning" [routerLink]="['/exo-templates', 'list']">CLOSE</a>
     </div>
+   <div class="col-xs-12">
+     <a class="btn btn-primary" [routerLink]="['/exo-templates', exoTemplate.id, 'edit']">EDIT</a>
+   </div>
 </div>

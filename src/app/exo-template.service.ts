@@ -12,14 +12,30 @@ export class ExoTemplateService {
   addExoTemplate(exoT : ExoTemplate) {
     this.exoTemplates.push(exoT);
   }
-  getExoTemplate(id: string) {
-    const exoTemplate: ExoTemplate =
+  getExoTemplate(id: number | string) {
+    var found: boolean = false;
+
+    var exoTemplate: ExoTemplate =
       this.exoTemplates.find(
         (ex) => {
           return ex.id === id;
         }
       );
+    if (exoTemplate === undefined) {
+      exoTemplate = new ExoTemplate();
+
+    }
       return exoTemplate;
+  }
+
+  save(exo: ExoTemplate) {
+    let tmp = this.getExoTemplate(exo.id);
+    let index = this.exoTemplates.indexOf(tmp);
+    if (index != -1) {
+      this.exoTemplates[index] = exo;
+      return;
+    }
+    this.exoTemplates.unshift(exo); // utile seulement lorsque mock
   }
 
   exoTemplates : ExoTemplate[] = [{"id":"A1","name":"DEV COUCHE HALTERE","comment":null ,"image":null,"type":["PECTORAUX"]}

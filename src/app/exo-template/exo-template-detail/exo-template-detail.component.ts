@@ -17,7 +17,7 @@ export class ExoTemplateDetailComponent implements OnInit {
   ngOnInit() {
     const id : string = this.activatedRoute.snapshot.params['exoId'];
     this.exoTemplate = this.exoTemplateSvc.getExoTemplate(id);
-    
+
     this.activatedRoute.params.subscribe((params: Params) => {
       this.exoTemplate = this.exoTemplateSvc.getExoTemplate(params['exoId']);
     });
